@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_lost"
+        android:icon="@drawable/ic_lost_mood_bad_24dp"
+        android:title="@string/lost" />
+    <item
+        android:id="@+id/navigation_found"
+        android:icon="@drawable/ic_found_mood_24dp"
+        android:title="@string/found" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_profile_white_24dp"
+        android:title="@string/profile" />
+    <item
+        android:id="@+id/navigation_map"
+        android:icon="@drawable/ic_map_24dp"
+        android:title="@string/map" />
+</menu>
