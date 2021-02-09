@@ -4,6 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.NoDisplay"
-    tools:context=".activity.StartActivity">
+    tools:context=".presentation.view.ui.StartActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

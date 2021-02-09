@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.view.ui.FirebaseSignUpActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/et_registration_sign_up"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="@id/til_email_sign_up"
+        app:layout_constraintStart_toStartOf="@id/til_email_sign_up"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="36dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/email_registration"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="36dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/til_email_sign_up"
+        app:layout_constraintStart_toStartOf="@id/til_email_sign_up"
+        app:layout_constraintTop_toBottomOf="@id/til_email_sign_up"
+        app:passwordToggleDrawable="@drawable/show_password_selector"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/et_password_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/password_registration"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_name_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="36dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/til_password_sign_up"
+        app:layout_constraintStart_toStartOf="@id/til_password_sign_up"
+        app:layout_constraintTop_toBottomOf="@id/til_password_sign_up">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_name_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/name_registration" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_phone_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="36dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/til_name_sign_up"
+        app:layout_constraintStart_toStartOf="@id/til_name_sign_up"
+        app:layout_constraintTop_toBottomOf="@id/til_name_sign_up">
+
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+            android:id="@+id/et_phone_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:inputType="phone"
+            android:typeface="monospace"
+            app:allowed_chars="0123456789+"
+            app:keep_hint="true"
+            app:layout_constraintEnd_toEndOf="@id/tv_aef_phone_number"
+            app:layout_constraintStart_toStartOf="@id/tv_aef_phone_number"
+            app:layout_constraintTop_toBottomOf="@id/tv_aef_phone_number"
+            app:mask="+7(###)-###-##-##" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/til_phone_sign_up"
+        app:layout_constraintStart_toStartOf="@id/til_phone_sign_up"
+        app:layout_constraintEnd_toEndOf="@id/til_phone_sign_up"></Spinner>
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/registration_button_sign_up"
+        app:layout_constraintEnd_toEndOf="@id/spinner"
+        app:layout_constraintStart_toStartOf="@id/spinner"
+        app:layout_constraintTop_toBottomOf="@id/spinner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

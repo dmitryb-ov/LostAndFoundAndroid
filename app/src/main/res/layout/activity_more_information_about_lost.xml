@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MoreInformationAboutLostActivity">
+    tools:context=".presentation.view.ui.MoreInformationAboutLostActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="44dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -18,10 +18,10 @@
             android:id="@+id/tv_more_inf_about_lost_name"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
-            android:layout_marginStart="48dp"
+            android:layout_marginStart="8dp"
             android:paddingTop="4dp"
             android:text="Марина"
-            android:textSize="16sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -34,7 +34,7 @@
             android:layout_marginEnd="12dp"
             android:paddingTop="4dp"
             android:text="12.02.2000"
-            android:textSize="12sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,24 +53,24 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
         tools:srcCompat="@tools:sample/avatars[2]" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_more_int_about_lost_post_img">
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        android:id="@+id/textInputLayout"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:padding="8dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/iv_more_int_about_lost_post_img">-->
 
-        <EditText
-            android:id="@+id/et_more_int_about_lost_geo_position"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:hint="@string/more_int_about_lost_location"
-            android:inputType="none"
-            android:text="Локааааааааа" />
-    </com.google.android.material.textfield.TextInputLayout>
+    <!--        <EditText-->
+    <!--            android:id="@+id/et_more_int_about_lost_geo_position"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@null"-->
+    <!--            android:hint="@string/more_int_about_lost_location"-->
+    <!--            android:inputType="none"-->
+    <!--            android:text="Локааааааааа" />-->
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
@@ -79,7 +79,7 @@
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/iv_more_int_about_lost_post_img">
 
         <EditText
             android:id="@+id/et_more_inf_about_lost_dat"
@@ -88,6 +88,7 @@
             android:background="@null"
             android:hint="@string/more_int_about_lost_date"
             android:inputType="none"
+            android:editable="false"
             android:text="10.12.2000" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,9 +103,10 @@
 
         <EditText
             android:id="@+id/et_more_inf_about_lost_description"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
+            android:editable="false"
             android:hint="@string/more_inf_about_lost_decription"
             android:inputType="none"
             android:text="Опааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа" />
@@ -120,10 +122,11 @@
 
         <EditText
             android:id="@+id/et_more_inf_about_lost_num"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
             android:hint="@string/more_inf_about_lost_number"
+            android:editable="false"
             android:inputType="none"
             android:text="+79688454323" />
     </com.google.android.material.textfield.TextInputLayout>

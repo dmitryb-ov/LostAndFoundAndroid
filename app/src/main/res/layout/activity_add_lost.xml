@@ -1,8 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.AddLostActivity">
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".presentation.view.ui.AddLostActivity">
+
+            <TextView
+                android:id="@+id/tv_aal_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:text="Имя"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_aal_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="@id/tv_aal_name"
+                app:layout_constraintStart_toStartOf="@id/tv_aal_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_aal_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_aal_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:hint="@string/et_name"
+                    android:maxEms="30"
+                    android:singleLine="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_aal_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:text="@string/aaf_header"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/til_aal_name"
+                app:layout_constraintStart_toStartOf="@id/til_aal_name"
+                app:layout_constraintTop_toBottomOf="@id/til_aal_name" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_aal_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="@id/tv_aal_header"
+                app:layout_constraintStart_toStartOf="@id/tv_aal_header"
+                app:layout_constraintTop_toBottomOf="@id/tv_aal_header">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_aal_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:hint="@string/til_header"
+                    android:maxEms="30"
+                    android:singleLine="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_aal_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:text="@string/aaf_description"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/til_aal_header"
+                app:layout_constraintStart_toStartOf="@id/til_aal_header"
+                app:layout_constraintTop_toBottomOf="@id/til_aal_header" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_all_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="@id/tv_aal_description"
+                app:layout_constraintStart_toStartOf="@id/tv_aal_description"
+                app:layout_constraintTop_toBottomOf="@id/tv_aal_description">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_aal_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:minLines="6"
+                    android:scrollbars="vertical" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_aal_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:text="@string/tv_aaf_phone"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/til_all_description"
+                app:layout_constraintStart_toStartOf="@id/til_all_description"
+                app:layout_constraintTop_toBottomOf="@id/til_all_description" />
+
+            <br.com.sapereaude.maskedEditText.MaskedEditText
+                android:id="@+id/et_aal_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:inputType="phone"
+                android:typeface="monospace"
+                app:allowed_chars="0123456789+"
+                app:keep_hint="true"
+                app:layout_constraintEnd_toEndOf="@id/tv_aal_phone"
+                app:layout_constraintStart_toStartOf="@id/tv_aal_phone"
+                app:layout_constraintTop_toBottomOf="@id/tv_aal_phone"
+                app:mask="+7(###)-###-##-##" />
+
+            <TextView
+                android:id="@+id/tv_aal_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:text="@string/all_lost_date"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/et_aal_phone"
+                app:layout_constraintStart_toStartOf="@id/et_aal_phone"
+                app:layout_constraintTop_toBottomOf="@id/et_aal_phone" />
+
+            <br.com.sapereaude.maskedEditText.MaskedEditText
+                android:id="@+id/et_aal_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:ems="10"
+                android:focusable="true"
+                android:hint="DD.MM.YYYY"
+                android:inputType="date"
+                app:layout_constraintEnd_toEndOf="@id/tv_aal_date"
+                app:layout_constraintStart_toStartOf="@id/tv_aal_date"
+                app:layout_constraintTop_toBottomOf="@id/tv_aal_date"
+                app:mask="##.##.####" />
+
+            <ImageView
+                android:id="@+id/iv_aal_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:maxWidth="100dp"
+                android:maxHeight="100dp"
+                app:layout_constraintStart_toStartOf="@id/et_aal_date"
+                app:layout_constraintTop_toBottomOf="@id/et_aal_date" />
+
+            <TextView
+                android:id="@+id/tv_choose_photo_err"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Необходимо выбрать фото!"
+                android:textColor="#D31C1C"
+                android:textSize="16sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/iv_aal_photo"
+                app:layout_constraintTop_toBottomOf="@id/et_aal_date" />
+
+            <Button
+                android:id="@+id/btn_aal_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/take_photo"
+                app:layout_constraintStart_toStartOf="@+id/iv_aal_photo"
+                app:layout_constraintTop_toBottomOf="@+id/iv_aal_photo" />
+
+            <Button
+                android:id="@+id/btn_aal_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/aaf_send"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_aal_photo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

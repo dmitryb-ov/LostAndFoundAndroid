@@ -5,14 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="300dp"
     android:paddingStart="0dp"
-    android:layout_marginBottom="10dp"
-    android:paddingEnd="4dp"
+    android:layout_marginBottom="16dp"
+    android:paddingEnd="0dp"
+    android:background="#FFFFFF"
     android:id="@+id/cl_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="40dp"
+        android:background="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,10 +23,11 @@
             android:id="@+id/tv_found_user_name"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
-            android:layout_marginStart="48dp"
+            android:layout_marginStart="8dp"
             android:paddingTop="4dp"
             android:text="Марина"
-            android:textSize="16sp"
+            android:textSize="24sp"
+            android:textColor="@color/colorTextWhite"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -37,7 +40,8 @@
             android:layout_marginEnd="12dp"
             android:paddingTop="4dp"
             android:text="12.02.2000"
-            android:textSize="12sp"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,7 +50,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -56,6 +60,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="12dp"
+            android:textSize="24sp"
+            android:textColor="@color/colorTextWhite"
+            android:background="#4CAF50"
             android:text="Пропал кошелек на имя Алексей"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +74,7 @@
         android:id="@+id/iv_found_post_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxHeight="220dp"
+        android:maxHeight="180dp"
         android:maxWidth="360dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.view.ui.EditProfileActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageview_account_profile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="2dp"
+        app:civ_fill_color="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_aef_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="start"
+        android:text="Имя"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageview_account_profile" />
+
+    <EditText
+        android:id="@+id/et_aef_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="Введи имя"
+        app:layout_constraintEnd_toEndOf="@id/tv_aef_name"
+        app:layout_constraintStart_toStartOf="@id/tv_aef_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_aef_name" />
+
+    <TextView
+        android:id="@+id/tv_aef_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Город"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/et_aef_name"
+        app:layout_constraintTop_toBottomOf="@id/et_aef_name" />
+
+    <EditText
+        android:id="@+id/et_aef_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="Город"
+        app:layout_constraintEnd_toEndOf="@id/tv_aef_city"
+        app:layout_constraintStart_toStartOf="@id/tv_aef_city"
+        app:layout_constraintTop_toBottomOf="@+id/tv_aef_city" />
+
+    <TextView
+        android:id="@+id/tv_aef_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Номер телефона"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/et_aef_city"
+        app:layout_constraintTop_toBottomOf="@id/et_aef_city" />
+
+    <br.com.sapereaude.maskedEditText.MaskedEditText
+        android:id="@+id/et_aef_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:inputType="phone"
+        android:typeface="monospace"
+        app:allowed_chars="0123456789+"
+        app:keep_hint="true"
+        app:layout_constraintEnd_toEndOf="@id/tv_aef_phone_number"
+        app:layout_constraintStart_toStartOf="@id/tv_aef_phone_number"
+        app:layout_constraintTop_toBottomOf="@id/tv_aef_phone_number"
+        app:mask="+7(###)-###-##-##" />
+
+    <Button
+        android:id="@+id/btn_aef_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Готово"
+        app:layout_constraintEnd_toEndOf="@id/et_aef_phone"
+        app:layout_constraintStart_toStartOf="@id/et_aef_phone"
+        app:layout_constraintTop_toBottomOf="@id/et_aef_phone" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
